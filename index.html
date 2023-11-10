@@ -9,6 +9,7 @@
             margin: 0;
             padding: 0;
             font-family: 'Arial', sans-serif;
+            overflow-x: hidden; 
         }
         header {
             background: #ffffff; 
@@ -100,35 +101,26 @@
             color: #fff;
         }
 
-        @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+        
+        body {
+            overflow-y: scroll; 
         }
         
-        @media only screen and (min-width: 1280px) and (max-width: 1440px) {
+        body::-webkit-scrollbar {
+            width: 12px;
         }
         
-        @media only screen and (max-width: 600px) {
-            #menu {
-                flex-direction: column;
-                align-items: center;
-                margin-top: 10px;
-            }
+        body::-webkit-scrollbar-thumb {
+            background-color: #cb3f3f; 
+            border-radius: 10px;
+        }
         
-            #logo {
-                margin-bottom: 10px;
-            }
-        
-            .menuCategory {
-                margin: 0 0 20px 0;
-            }
-        
-            .menuImage {
-                width: 100%;
-                height: auto;
-            }
+        body::-webkit-scrollbar-track {
+            background-color: #ffffff; 
         }
 
         footer {
-            background: linear-gradient(90deg, #fff7ad, #ffa9f9); /* Gradasi linear untuk latar belakang box menu cafe */
+            background: linear-gradient(90deg, #fff7ad, #ffa9f9); 
             text-align: center;
             padding: 10px;
             position: fixed;
